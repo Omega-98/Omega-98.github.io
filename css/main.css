@@ -1379,7 +1379,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #376730;
+    background: #58e782;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2893,4 +2893,19 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+@font-face {
+  font-family: 'Maple';
+  src: url("/fonts/maple/Maple.woff2") format('woff2'), url("/fonts/maple/Maple.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body,
+html,
+input,
+button,
+textarea,
+select {
+  font-family: 'Maple', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
