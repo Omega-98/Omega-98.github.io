@@ -21,17 +21,17 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","success_text":"copy successfully","error_text":"copy failed"},"fold":{"enable":true,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":100,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
 <link rel="stylesheet" href="/css/fonts.css">
-    <meta name="description" content="图书：https:&#x2F;&#x2F;github.com&#x2F;MathFoundationRL&#x2F;Book-Mathematical-Foundation-of-Reinforcement-Learning作者：赵世钰 基本名词 网格世界 (Grid World)我们通常用一个网格图来解释和设计强化学习中的概念和算法。网格中包含起点，终点和禁区。我们的目标是让agent通过算法找到从起点到终点的最优路线。 状态 (S">
+    <meta name="description" content="图书：https:&#x2F;&#x2F;github.com&#x2F;MathFoundationRL&#x2F;Book-Mathematical-Foundation-of-Reinforcement-Learning作者：赵世钰配套课程资源：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1sd4y167NS&#x2F; 基本名词 网格世界 (Grid World)我们通常用一个网格图来解释和设计强化学习中的概念和算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《强化学习的数学原理》第一章：基本概念">
 <meta property="og:url" content="http://example.com/2025/07/28/Mathematical%20Foundation%20of%20Reinforcement%20Learning%20Ch.1/index.html">
 <meta property="og:site_name" content="Lab of Omega98">
-<meta property="og:description" content="图书：https:&#x2F;&#x2F;github.com&#x2F;MathFoundationRL&#x2F;Book-Mathematical-Foundation-of-Reinforcement-Learning作者：赵世钰 基本名词 网格世界 (Grid World)我们通常用一个网格图来解释和设计强化学习中的概念和算法。网格中包含起点，终点和禁区。我们的目标是让agent通过算法找到从起点到终点的最优路线。 状态 (S">
+<meta property="og:description" content="图书：https:&#x2F;&#x2F;github.com&#x2F;MathFoundationRL&#x2F;Book-Mathematical-Foundation-of-Reinforcement-Learning作者：赵世钰配套课程资源：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1sd4y167NS&#x2F; 基本名词 网格世界 (Grid World)我们通常用一个网格图来解释和设计强化学习中的概念和算法">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/1.png">
 <meta property="og:image" content="http://example.com/images/2.png">
 <meta property="article:published_time" content="2025-07-28T06:11:51.475Z">
-<meta property="article:modified_time" content="2025-07-28T07:29:17.576Z">
+<meta property="article:modified_time" content="2025-07-28T07:40:31.325Z">
 <meta property="article:author" content="Omega98">
 <meta property="article:tag" content="Reinforcement Learning">
 <meta property="article:tag" content="Note">
@@ -252,7 +252,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>图书：<a target="_blank" rel="noopener" href="https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning">https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning</a><br>作者：赵世钰</p>
+    <div class="post-body" itemprop="articleBody"><p>图书：<a target="_blank" rel="noopener" href="https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning">https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning</a><br>作者：赵世钰<br>配套课程资源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1sd4y167NS/">https://www.bilibili.com/video/BV1sd4y167NS/</a></p>
 <h1 id="基本名词"><a href="#基本名词" class="headerlink" title="基本名词"></a>基本名词</h1><ul>
 <li>网格世界 (Grid World)<br>我们通常用一个网格图来解释和设计强化学习中的概念和算法。网格中包含起点，终点和禁区。我们的目标是让agent通过算法找到从起点到终点的最优路线。</li>
 <li>状态 (State)和行为(Action)<br>我们用$s_n$表示一个状态，$a_n$表示路线的行为。<br><img src="/images/1.png" alt="书中的示例, p3"></li>
