@@ -21,24 +21,31 @@
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":false,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat","success_text":"copy successfully","error_text":"copy failed"},"fold":{"enable":true,"height":500},"language":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":100,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
 <link rel="stylesheet" href="/css/fonts.css">
-    <meta name="description" content="Otomad &amp; Machine Learning">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lab of Omega98">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="图书：https:&#x2F;&#x2F;github.com&#x2F;MathFoundationRL&#x2F;Book-Mathematical-Foundation-of-Reinforcement-Learning作者：赵世钰 基本名词 网格世界 (Grid World)我们通常用一个网格图来解释和设计强化学习中的概念和算法。网格中包含起点，终点和禁区。我们的目标是让agent通过算法找到从起点到终点的最优路线。 状态 (S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《强化学习的数学原理》第一章：基本概念">
+<meta property="og:url" content="http://example.com/2025/07/28/Mathematical%20Foundation%20of%20Reinforcement%20Learning%20Ch.1/index.html">
 <meta property="og:site_name" content="Lab of Omega98">
-<meta property="og:description" content="Otomad &amp; Machine Learning">
+<meta property="og:description" content="图书：https:&#x2F;&#x2F;github.com&#x2F;MathFoundationRL&#x2F;Book-Mathematical-Foundation-of-Reinforcement-Learning作者：赵世钰 基本名词 网格世界 (Grid World)我们通常用一个网格图来解释和设计强化学习中的概念和算法。网格中包含起点，终点和禁区。我们的目标是让agent通过算法找到从起点到终点的最优路线。 状态 (S">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/1.png">
+<meta property="og:image" content="http://example.com/images/2.png">
+<meta property="article:published_time" content="2025-07-28T06:11:51.475Z">
+<meta property="article:modified_time" content="2025-07-28T07:19:19.219Z">
 <meta property="article:author" content="Omega98">
+<meta property="article:tag" content="Reinforcement Learning">
+<meta property="article:tag" content="Note">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/1.png">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2025/07/28/Mathematical%20Foundation%20of%20Reinforcement%20Learning%20Ch.1/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/07/28/Mathematical%20Foundation%20of%20Reinforcement%20Learning%20Ch.1/","path":"2025/07/28/Mathematical Foundation of Reinforcement Learning Ch.1/","title":"《强化学习的数学原理》第一章：基本概念"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Lab of Omega98</title>
+<title>《强化学习的数学原理》第一章：基本概念 | Lab of Omega98</title>
   
 
 
@@ -94,7 +101,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Lab of Omega98</h1>
+      <p class="site-title">Lab of Omega98</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -120,7 +127,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -133,6 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%90%8D%E8%AF%8D"><span class="nav-number">1.</span> <span class="nav-text">基本名词</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E7%A7%91%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B-Markov-Decision-Process-MDP"><span class="nav-number">2.</span> <span class="nav-text">马尔科夫决策过程 (Markov Decision Process, MDP)</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -182,105 +190,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/07/14/My%20First%20Blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/blog_avatar.jpg">
-      <meta itemprop="name" content="Omega98">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lab of Omega98">
-      <meta itemprop="description" content="Otomad & Machine Learning">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Lab of Omega98">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/07/14/My%20First%20Blog/" class="post-title-link" itemprop="url">欢迎来到这里</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-            <i class="fa fa-thumb-tack"></i>
-            <font color=7D26CD>置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-07-14 17:22:18" itemprop="dateCreated datePublished" datetime="2025-07-14T17:22:18+08:00">2025-07-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Intro/" itemprop="url" rel="index"><span itemprop="name">Intro</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>如果你现在正在阅读这些文字，说明我的博客已经搭建好了。<br>正如你所见，这个网站现在正处于起步阶段，看起来非常的简陋。因此，接下来我会逐步完善网页的功能，包括但不限于添加评论，搜索，发表等功能（也有可能鸽掉）。<br>如果你有任何建议&#x2F;意见&#x2F;吐槽，或者发现了bug，请通过以下方式反馈：</p>
-<ol>
-<li>github：<a target="_blank" rel="noopener" href="https://github.com/Omega-98/Omega-98.github.io/issues">https://github.com/Omega-98/Omega-98.github.io/issues</a></li>
-<li>email: <a href="mailto:&#x6f;&#109;&#x65;&#x67;&#x61;&#57;&#x38;&#48;&#x30;&#48;&#x30;&#x40;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">omega980000@gmail.com</a></li>
-<li>QQ: 2756635010</li>
-</ol>
-<p>十分十分十分感谢你的到来和支持 (´,,•ω•,,)♡ </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/07/28/Mathematical%20Foundation%20of%20Reinforcement%20Learning%20Ch.1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -294,13 +214,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Lab of Omega98">
+      <meta itemprop="name" content="《强化学习的数学原理》第一章：基本概念 | Lab of Omega98">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/07/28/Mathematical%20Foundation%20of%20Reinforcement%20Learning%20Ch.1/" class="post-title-link" itemprop="url">《强化学习的数学原理》第一章：基本概念</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          《强化学习的数学原理》第一章：基本概念
+        </h1>
 
         <div class="post-meta-container">
           
@@ -332,8 +252,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <p>图书：<a target="_blank" rel="noopener" href="https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning">https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning</a><br>作者：赵世钰</p>
+    <div class="post-body" itemprop="articleBody"><p>图书：<a target="_blank" rel="noopener" href="https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning">https://github.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning</a><br>作者：赵世钰</p>
 <h1 id="基本名词"><a href="#基本名词" class="headerlink" title="基本名词"></a>基本名词</h1><ul>
 <li>网格世界 (Grid World)<br>我们通常用一个网格图来解释和设计强化学习中的概念和算法。网格中包含起点，终点和禁区。我们的目标是让agent通过算法找到从起点到终点的最优路线。</li>
 <li>状态 (State)和行为(Action)<br>我们用$s_n$表示一个状态，$a_n$表示路线的行为。<br><img src="/images/1.png" alt="书中的示例, p3"></li>
@@ -357,7 +276,6 @@
 <li><em>Markov Property</em>: memoryless<br>$$p(s_{t + 1}|a_{t+1}, s_t, …, a_1, s_0) &#x3D; p (s_{t + 1}|a_{t + 1}, s_t)$$<br>$$p(r_{t + 1}|a_{t+1}, s_t, …, a_1, s_0) &#x3D; p (r_{t + 1}|a_{t + 1}, s_t)$$<br>此外，MDP 和Markov Process (MP) 的区别是，后者不涉及决策和奖励。</li>
 </ul>
 
-      
     </div>
 
     
@@ -365,96 +283,26 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-tags">
+              <a href="/tags/Reinforcement-Learning/" rel="tag"># Reinforcement Learning</a>
+              <a href="/tags/Note/" rel="tag"># Note</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/07/17/Math%20test/" rel="prev" title="这是一个测试帖子 This Is A Test Journal">
+                  <i class="fa fa-angle-left"></i> 这是一个测试帖子 This Is A Test Journal
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/07/17/Math%20test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/blog_avatar.jpg">
-      <meta itemprop="name" content="Omega98">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lab of Omega98">
-      <meta itemprop="description" content="Otomad & Machine Learning">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Lab of Omega98">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/07/17/Math%20test/" class="post-title-link" itemprop="url">这是一个测试帖子 This Is A Test Journal</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-07-17 15:14:28" itemprop="dateCreated datePublished" datetime="2025-07-17T15:14:28+08:00">2025-07-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Test/" itemprop="url" rel="index"><span itemprop="name">Test</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><h2 id="质能方程"><a href="#质能方程" class="headerlink" title="质能方程"></a>质能方程</h2><p>$$\begin{equation} \label{eq1}<br>e&#x3D;mc^2<br>\end{equation}$$</p>
-<h2 id="梯度下降公式"><a href="#梯度下降公式" class="headerlink" title="梯度下降公式"></a>梯度下降公式</h2><p>$$<br>\theta_{t+1} &#x3D; \theta_t - \eta \nabla J(\theta_t)<br>$$</p>
-<p>其中，$\eta$ 是学习率，$\nabla J$ 是梯度。</p>
-<h1 id="代码模块"><a href="#代码模块" class="headerlink" title="代码模块"></a>代码模块</h1><pre><code class="highlight python"><span class="keyword">def</span> <span class="title function_">Start</span>():
-  <span class="keyword">return</span> <span class="literal">True</span></code></pre>
-
-<h1 id="分级标题-1"><a href="#分级标题-1" class="headerlink" title="分级标题 1"></a>分级标题 1</h1><h2 id="分级标题-2"><a href="#分级标题-2" class="headerlink" title="分级标题 2"></a>分级标题 2</h2><h3 id="分级标题-3"><a href="#分级标题-3" class="headerlink" title="分级标题 3"></a>分级标题 3</h3><h4 id="分级标题-4"><a href="#分级标题-4" class="headerlink" title="分级标题 4"></a>分级标题 4</h4><h1 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h1><p><img src="/images/%E7%83%AD%E8%BE%A3%E9%9F%B3live.jpg" alt="别忘了来8月16日的音live！"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
